@@ -38,31 +38,34 @@ body {
 }
 .res-card h3 {
   text-align: center;
+  margin: 2px;
 }
 .res-card h4 {
   text-align: center;
-  align-items: center;
-  justify-content: center;
   color: gray;
+  justify-content: center;
+  align-items: center;
+  font-size: small;
+  margin: 7px;
 }
 
 .res-card h5 {
   display: flex;
+  margin: 0px;
 }
 .res-card h5 p {
-  padding: 7px;
+  padding: 3px;
   margin-left: 5px;
 }
 .rating {
   background-color: green;
   color: white;
   margin-right: 40px;
-  padding-top: 7px;
+  padding-top: 3px;
 }
 .res-card:hover {
   cursor: pointer;
-  transform: scale(0.93);
-  /* box-shadow: 0.2px 0.2px 2.5px 2.5px rgb(86, 190, 86); */
+  transform: scale(0.9);
   box-shadow: 2.5px 2.5px rgb(86, 190, 86), 0 0 0.2em 0.2em rgb(105, 182, 178);
 }
 
@@ -83,15 +86,83 @@ body {
   margin-left: 10px;
 }
 
-.filter-btn {
+.filter {
   margin: 20px 45px;
 }
 
-.filter-btn button {
+.filter button {
   padding: 5px;
-  background-color: rgb(8, 86, 163);
+  background-color: rgb(67, 211, 115);
   color: white;
   border: 1px solid black;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 55px;
+  margin-left: 25px;
+}
+.shimmer-card {
+  width: 220px;
+  height: 400px;
+  margin: 20px;
+
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+.shimmer-fake-img {
+  width: 210px;
+  height: 220px;
+  background-color: rgb(203, 198, 198);
+  margin: 3px;
+  margin-left: 4px;
+  border-radius: 5px;
+}
+
+.shimmer-card h3 {
+  background-color: rgb(203, 198, 198);
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 75px;
+  text-align: center;
+  border-radius: 5px;
+  color: rgb(203, 198, 198);
+}
+.shimmer-card h4 {
+  background-color: rgb(203, 198, 198);
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 45px;
+  text-align: center;
+  border-radius: 5px;
+  color: rgb(203, 198, 198);
+}
+.filter {
+  display: flex;
+}
+.search button {
+  margin-right: 20px;
+  cursor: pointer;
+}
+.search input {
+  padding: 4.8px;
+  border: 1px solid rgb(34, 166, 78);
+  border-radius: 3px;
+}
+
+.filter button:hover {
+  background-color: rgb(34, 166, 78);
+  border: 1px solid black;
+}
+
+.no-result {
+  margin-left: 600px;
+}
+.sad-img img {
+  width: 400px;
+  height: 400px;
+  margin-left: 450px;
 }
