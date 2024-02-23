@@ -1,19 +1,19 @@
 import React from "react";
-import SearchComponent from "./SearchComponent";
+import useOnlineStatus from "../utils/useOnlineStatus";
+
 import RestroCardComponent from "./RestroCardComponent";
 import { API_DATA_URL, SAD_IMG_URL } from "../utils/constants";
 import { useState, useEffect } from "react";
 import ShimmerUI from "./ShimmerUI";
+import { Link } from "react-router-dom";
 
 function BodyComponent() {
   const [data, setData] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState([]);
-  console.log("rendering");
-
+  const onlineStatus = useOnlineStatus();
   const filter = () => {
     setData(data.filter((res) => res.info.avgRating >= 4.2));
-    console.log(data);
   };
 
   useEffect(() => {
@@ -28,6 +28,17 @@ function BodyComponent() {
     setData(restaurants);
     setFilteredRestaurant(restaurants);
   };
+
+  if (onlineStatus === false) {
+    return (
+      <div className="no-connection">
+        <h1>Please Check Your Internet Connection</h1>
+        <h3>🔄 Checking the network cables, modem, and router</h3>
+        <h3>🔄 Reconnecting to Wi-Fi</h3>
+        <h3>🔄 ERR_INTERNET_DISCONNECTED😔</h3>
+      </div>
+    );
+  }
 
   return data.length === 0 ? (
     <ShimmerUI />
@@ -56,7 +67,11 @@ function BodyComponent() {
             <img src={SAD_IMG_URL} alt="" />
           </div>
         ) : (
-          filteredRestaurant?.map((restaurant) => <RestroCardComponent resp={restaurant} key={restaurant.info.id} />)
+          filteredRestaurant?.map((restaurant) => (
+            <Link key={restaurant.info.id} to={"/restaurant/" + restaurant.info.id}>
+              <RestroCardComponent resp={restaurant} />
+            </Link>
+          ))
         )}
       </div>
     </div>
