@@ -21,6 +21,9 @@ function HeaderComponent() {
           <li>
             <Link to="/contactUs">Contact Us</Link>
           </li>
+          <li>
+            <Link to="/grocery">Grocery Store</Link>
+          </li>
 
           <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/512x512/shopping_cart.png" />
           <li>Online Status: {onlineStatus ? "🟢" : "🔴"}</li>
