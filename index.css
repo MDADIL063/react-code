@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
 body {
   margin: 0px;
   padding: 0px;
@@ -249,7 +253,6 @@ a:-webkit-any-link {
   border-bottom: 1px solid rgb(83, 82, 82);
   margin-left: 260px;
   margin-right: 170px;
-  margin-top: 40px;
 }
 .menu-list {
   margin-left: 260px;
@@ -292,3 +295,30 @@ a:-webkit-any-link {
   margin-left: 430px;
   color: gray;
 }
+
+.only-veg-btn {
+  padding: 5px;
+  background-color: rgb(61, 177, 90);
+  border-radius: 5px;
+  color: white;
+  margin-top: 40px;
+  margin-left: 320px;
+  border: 1px solid rgb(0, 0, 0);
+  cursor: pointer;
+}
+.only-veg-btn:hover {
+  background-color: rgb(46, 135, 68);
+}
+.all-menu-btn {
+  padding: 5px;
+  background-color: rgb(69, 142, 211);
+  border-radius: 5px;
+  color: white;
+  margin-top: 40px;
+  margin-left: 320px;
+  border: 1px solid rgb(0, 0, 0);
+  cursor: pointer;
+}
+.all-menu-btn:hover {
+  background-color: rgb(52, 105, 155);
+} */

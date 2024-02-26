@@ -31,11 +31,12 @@ function BodyComponent() {
 
   if (onlineStatus === false) {
     return (
-      <div className="no-connection">
-        <h1>Please Check Your Internet Connection</h1>
-        <h3>🔄 Checking the network cables, modem, and router</h3>
-        <h3>🔄 Reconnecting to Wi-Fi</h3>
-        <h3>🔄 ERR_INTERNET_DISCONNECTED😔</h3>
+      <div className="justify-center">
+        <h1 className="text-center mt-10 text-xl font-bold">Please Check Your Internet Connection</h1>
+        <h3 className="text-center my-2  text-gray-500 "> Checking the network cables, modem, and router</h3>
+        <h3 className="text-center my-2 mr-24  text-gray-500">🌑 Reconnecting to Wi-Fi</h3>
+        <h3 className="text-center my-2   text-gray-500">🌑 ERR_INTERNET_DISCONNECTED😔</h3>
+        <h3 className="text-center ">📶❌ </h3>
       </div>
     );
   }
@@ -44,10 +45,17 @@ function BodyComponent() {
     <ShimmerUI />
   ) : (
     <div>
-      <div className="filter">
+      <div className="flex p-4 m-4">
         <div className="search">
-          <input type="text" placeholder="Search Restaurants here..." value={searchText} onChange={(e) => setSearchText(e.target.value)} />
+          <input
+            className="border border-solid border-black w-300 rounded-md w-56 pl-2  "
+            type="text"
+            placeholder="Search Restaurants here..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
           <button
+            className="px-5  bg-green-200 border border-solid border-black rounded-md mr-10 ml-2"
             onClick={() => {
               const filteredValue = data.filter((resp) => resp.info.name.toLowerCase().includes(searchText.toLowerCase()));
 
@@ -58,13 +66,15 @@ function BodyComponent() {
           </button>
         </div>
 
-        <button onClick={() => filter()}>Top Rated Restaurants</button>
+        <button className="px-5  bg-green-200 border border-solid border-black rounded-md" onClick={() => filter()}>
+          Top Rated Restaurants
+        </button>
       </div>
-      <div className="res-container">
+      <div className="flex flex-wrap ">
         {filteredRestaurant.length === 0 ? (
-          <div className="sad-img">
-            <p className="no-result">No Result Found </p>
-            <img src={SAD_IMG_URL} alt="" />
+          <div className=" ">
+            <p className="text-center ml-[500px] ">No Result Found </p>
+            <img className="w-96 ml-[500px]" src={SAD_IMG_URL} alt="" />
           </div>
         ) : (
           filteredRestaurant?.map((restaurant) => (

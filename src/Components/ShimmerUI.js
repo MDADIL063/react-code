@@ -2,106 +2,96 @@ import React from "react";
 
 function ShimmerUI() {
   return (
-    <div className="shimmer-container">
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
+    <div className=" flex flex-wrap mx-0.5 my-14">
+      <div className="w-52 h-[300px]   mx-2 my-4 rounded-md p-2 bg-gray-100 ">
+        <div className="w-[185px] h-32 m-1 bg-gray-200 rounded-md"></div>
+        <p className="bg-gray-200 my-4 mr-8 ml-1 rounded-sm text-gray-200">c</p>
+        <p className="bg-gray-200 my-4  mr-5 ml-1 rounded-sm text-gray-200">c</p>
       </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
+      <div className="w-52 h-[300px]   mx-2 my-4 rounded-md p-2 bg-gray-100 ">
+        <div className="w-[185px] h-32 m-1 bg-gray-200 rounded-md"></div>
+        <p className="bg-gray-200 my-4 mr-8 ml-1 rounded-sm text-gray-200">c</p>
+        <p className="bg-gray-200 my-4  mr-5 ml-1 rounded-sm text-gray-200">c</p>
       </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
+      <div className="w-52 h-[300px]   mx-2 my-4 rounded-md p-2 bg-gray-100 ">
+        <div className="w-[185px] h-32 m-1 bg-gray-200 rounded-md"></div>
+        <p className="bg-gray-200 my-4 mr-8 ml-1 rounded-sm text-gray-200">c</p>
+        <p className="bg-gray-200 my-4  mr-5 ml-1 rounded-sm text-gray-200">c</p>
       </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
+      <div className="w-52 h-[300px]   mx-2 my-4 rounded-md p-2 bg-gray-100 ">
+        <div className="w-[185px] h-32 m-1 bg-gray-200 rounded-md"></div>
+        <p className="bg-gray-200 my-4 mr-8 ml-1 rounded-sm text-gray-200">c</p>
+        <p className="bg-gray-200 my-4  mr-5 ml-1 rounded-sm text-gray-200">c</p>
       </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
+      <div className="w-52 h-[300px]   mx-2 my-4 rounded-md p-2 bg-gray-100 ">
+        <div className="w-[185px] h-32 m-1 bg-gray-200 rounded-md"></div>
+        <p className="bg-gray-200 my-4 mr-8 ml-1 rounded-sm text-gray-200">c</p>
+        <p className="bg-gray-200 my-4  mr-5 ml-1 rounded-sm text-gray-200">c</p>
       </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
+      <div className="w-52 h-[300px]   mx-2 my-4 rounded-md p-2 bg-gray-100 ">
+        <div className="w-[185px] h-32 m-1 bg-gray-200 rounded-md"></div>
+        <p className="bg-gray-200 my-4 mr-8 ml-1 rounded-sm text-gray-200">c</p>
+        <p className="bg-gray-200 my-4  mr-5 ml-1 rounded-sm text-gray-200">c</p>
       </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
+      <div className="w-52 h-[300px]   mx-2 my-4 rounded-md p-2 bg-gray-100 ">
+        <div className="w-[185px] h-32 m-1 bg-gray-200 rounded-md"></div>
+        <p className="bg-gray-200 my-4 mr-8 ml-1 rounded-sm text-gray-200">c</p>
+        <p className="bg-gray-200 my-4  mr-5 ml-1 rounded-sm text-gray-200">c</p>
       </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
+      <div className="w-52 h-[300px]   mx-2 my-4 rounded-md p-2 bg-gray-100 ">
+        <div className="w-[185px] h-32 m-1 bg-gray-200 rounded-md"></div>
+        <p className="bg-gray-200 my-4 mr-8 ml-1 rounded-sm text-gray-200">c</p>
+        <p className="bg-gray-200 my-4  mr-5 ml-1 rounded-sm text-gray-200">c</p>
       </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
+      <div className="w-52 h-[300px]   mx-2 my-4 rounded-md p-2 bg-gray-100 ">
+        <div className="w-[185px] h-32 m-1 bg-gray-200 rounded-md"></div>
+        <p className="bg-gray-200 my-4 mr-8 ml-1 rounded-sm text-gray-200">c</p>
+        <p className="bg-gray-200 my-4  mr-5 ml-1 rounded-sm text-gray-200">c</p>
       </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
+      <div className="w-52 h-[300px]   mx-2 my-4 rounded-md p-2 bg-gray-100 ">
+        <div className="w-[185px] h-32 m-1 bg-gray-200 rounded-md"></div>
+        <p className="bg-gray-200 my-4 mr-8 ml-1 rounded-sm text-gray-200">c</p>
+        <p className="bg-gray-200 my-4  mr-5 ml-1 rounded-sm text-gray-200">c</p>
       </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
+      <div className="w-52 h-[300px]   mx-2 my-4 rounded-md p-2 bg-gray-100 ">
+        <div className="w-[185px] h-32 m-1 bg-gray-200 rounded-md"></div>
+        <p className="bg-gray-200 my-4 mr-8 ml-1 rounded-sm text-gray-200">c</p>
+        <p className="bg-gray-200 my-4  mr-5 ml-1 rounded-sm text-gray-200">c</p>
       </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
+      <div className="w-52 h-[300px]   mx-2 my-4 rounded-md p-2 bg-gray-100 ">
+        <div className="w-[185px] h-32 m-1 bg-gray-200 rounded-md"></div>
+        <p className="bg-gray-200 my-4 mr-8 ml-1 rounded-sm text-gray-200">c</p>
+        <p className="bg-gray-200 my-4  mr-5 ml-1 rounded-sm text-gray-200">c</p>
       </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
+      <div className="w-52 h-[300px]   mx-2 my-4 rounded-md p-2 bg-gray-100 ">
+        <div className="w-[185px] h-32 m-1 bg-gray-200 rounded-md"></div>
+        <p className="bg-gray-200 my-4 mr-8 ml-1 rounded-sm text-gray-200">c</p>
+        <p className="bg-gray-200 my-4  mr-5 ml-1 rounded-sm text-gray-200">c</p>
       </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
+      <div className="w-52 h-[300px]   mx-2 my-4 rounded-md p-2 bg-gray-100 ">
+        <div className="w-[185px] h-32 m-1 bg-gray-200 rounded-md"></div>
+        <p className="bg-gray-200 my-4 mr-8 ml-1 rounded-sm text-gray-200">c</p>
+        <p className="bg-gray-200 my-4  mr-5 ml-1 rounded-sm text-gray-200">c</p>
       </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
+      <div className="w-52 h-[300px]   mx-2 my-4 rounded-md p-2 bg-gray-100 ">
+        <div className="w-[185px] h-32 m-1 bg-gray-200 rounded-md"></div>
+        <p className="bg-gray-200 my-4 mr-8 ml-1 rounded-sm text-gray-200">c</p>
+        <p className="bg-gray-200 my-4  mr-5 ml-1 rounded-sm text-gray-200">c</p>
       </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
+      <div className="w-52 h-[300px]   mx-2 my-4 rounded-md p-2 bg-gray-100 ">
+        <div className="w-[185px] h-32 m-1 bg-gray-200 rounded-md"></div>
+        <p className="bg-gray-200 my-4 mr-8 ml-1 rounded-sm text-gray-200">c</p>
+        <p className="bg-gray-200 my-4  mr-5 ml-1 rounded-sm text-gray-200">c</p>
       </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
+      <div className="w-52 h-[300px]   mx-2 my-4 rounded-md p-2 bg-gray-100 ">
+        <div className="w-[185px] h-32 m-1 bg-gray-200 rounded-md"></div>
+        <p className="bg-gray-200 my-4 mr-8 ml-1 rounded-sm text-gray-200">c</p>
+        <p className="bg-gray-200 my-4  mr-5 ml-1 rounded-sm text-gray-200">c</p>
       </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
-      </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
-      </div>
-      <div className="shimmer-card">
-        <div className="shimmer-fake-img"></div>
-        <h3>color</h3>
-        <h4>color</h4>
+      <div className="w-52 h-[300px]   mx-2 my-4 rounded-md p-2 bg-gray-100 ">
+        <div className="w-[185px] h-32 m-1 bg-gray-200 rounded-md"></div>
+        <p className="bg-gray-200 my-4 mr-8 ml-1 rounded-sm text-gray-200">c</p>
+        <p className="bg-gray-200 my-4  mr-5 ml-1 rounded-sm text-gray-200">c</p>
       </div>
     </div>
   );
