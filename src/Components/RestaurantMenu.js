@@ -2,22 +2,26 @@ import { CDN_URL } from "../utils/constants";
 import ShimmerUI from "./ShimmerUI";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
-import { useState } from "react";
+
 import MenuList from "./MenuList";
+import { useState } from "react";
 
 function RestaurantMenu() {
   const { resId } = useParams();
-  const [onlyVeg, setOnlyVeg] = useState([]);
-
+  const [showIndex, setShowIndex] = useState(0);
   const resInfo = useRestaurantMenu(resId);
 
   if (resInfo === null) return <ShimmerUI />;
   const { name, cloudinaryImageId, cuisines, city, locality, totalRatingsString, avgRating, costForTwoMessage } =
-    resInfo?.cards[2]?.card?.card?.info;
-  const { maxDeliveryTime, minDeliveryTime } = resInfo?.cards[2]?.card?.card?.info?.sla;
-  const { itemCards } = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+    resInfo?.cards[0]?.card?.card?.info;
 
-  // console.log("gghfgfy", item.card.info.itemAttribute.vegClassifier);
+  const { maxDeliveryTime, minDeliveryTime } = resInfo?.cards[0]?.card?.card?.info?.sla;
+
+  const allCards = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    (c) => c.card.card?.["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+  );
+  // console.log(allCards);
+
   return (
     <div>
       <div className="menu">
@@ -42,34 +46,17 @@ function RestaurantMenu() {
           </p>
         </div>
       </div>
-      <div className="text-center border-b-2 border-solid border-gray-400 p-4 mr-28 ml-44 ">
-        Click Here For
-        {onlyVeg?.length !== 0 ? (
-          <button
-            className=" border border-solid border-black p-1 ml-1 rounded-md text-sm bg-orange-400"
-            onClick={() => {
-              setOnlyVeg([]);
-            }}
-          >
-            ALL Menu
-          </button>
-        ) : (
-          <button
-            className="border border-solid border-black p-1  ml-1 rounded-md text-sm bg-green-400"
-            onClick={() => {
-              filterData = itemCards?.filter((item) => item.card.info.itemAttribute.vegClassifier == "VEG");
-              setOnlyVeg(filterData);
-            }}
-          >
-            Only Veg
-          </button>
-        )}
-      </div>
+      <div className="text-center border-b-2 border-solid border-gray-400 p-4 mr-28 ml-44 "></div>
 
       <div>
-        {onlyVeg?.length !== 0
-          ? onlyVeg?.map((item) => <MenuList resp={item} key={item.card.info.id} />)
-          : itemCards?.map((item) => <MenuList resp={item} key={item.card.info.id} />)}
+        {allCards?.map((item, index) => (
+          <MenuList
+            data={item?.card?.card}
+            setShowIndex={() => setShowIndex(index)}
+            showList={index === showIndex ? true : false}
+            key={item?.card?.card?.title}
+          />
+        ))}
       </div>
     </div>
   );

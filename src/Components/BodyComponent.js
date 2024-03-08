@@ -1,7 +1,7 @@
 import React from "react";
 import useOnlineStatus from "../utils/useOnlineStatus";
 
-import RestroCardComponent from "./RestroCardComponent";
+import RestroCardComponent, { Discount } from "./RestroCardComponent";
 import { API_DATA_URL, SAD_IMG_URL } from "../utils/constants";
 import { useState, useEffect } from "react";
 import ShimmerUI from "./ShimmerUI";
@@ -12,8 +12,10 @@ function BodyComponent() {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState([]);
   const onlineStatus = useOnlineStatus();
+
+  const DiscountOffer = Discount(RestroCardComponent);
   const filter = () => {
-    setData(data.filter((res) => res.info.avgRating >= 4.2));
+    setFilteredRestaurant(data.filter((res) => res?.info?.avgRating >= 4.2));
   };
 
   useEffect(() => {
@@ -23,7 +25,7 @@ function BodyComponent() {
   const fetchData = async () => {
     const data = await fetch(API_DATA_URL);
     const json = await data.json();
-    const restaurants = json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
+    const restaurants = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
 
     setData(restaurants);
     setFilteredRestaurant(restaurants);
@@ -50,6 +52,7 @@ function BodyComponent() {
           <input
             className="border border-solid border-black w-300 rounded-md w-56 pl-2  "
             type="text"
+            data-testid="searchInput"
             placeholder="Search Restaurants here..."
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
@@ -57,9 +60,11 @@ function BodyComponent() {
           <button
             className="px-5  bg-green-200 border border-solid border-black rounded-md mr-10 ml-2"
             onClick={() => {
-              const filteredValue = data.filter((resp) => resp.info.name.toLowerCase().includes(searchText.toLowerCase()));
+              const filteredValue = data.filter((resp) => resp?.info?.name.toLowerCase().includes(searchText.toLowerCase()));
 
-              setFilteredRestaurant(filteredValue);
+              if (filteredValue.length) {
+                setFilteredRestaurant(filteredValue);
+              }
             }}
           >
             Search
@@ -78,9 +83,19 @@ function BodyComponent() {
           </div>
         ) : (
           filteredRestaurant?.map((restaurant) => (
-            <Link key={restaurant.info.id} to={"/restaurant/" + restaurant.info.id}>
-              <RestroCardComponent resp={restaurant} />
-            </Link>
+            <div key={restaurant?.info?.id} data-testid="resCard">
+              <Link to={"/restaurant/" + restaurant?.info?.id}>
+                {restaurant?.info?.aggregatedDiscountInfoV3 ? (
+                  <div className="hover:scale-90">
+                    <DiscountOffer resp={restaurant} />
+                  </div>
+                ) : (
+                  <div className="hover:scale-90">
+                    <RestroCardComponent resp={restaurant} />
+                  </div>
+                )}
+              </Link>
+            </div>
           ))
         )}
       </div>

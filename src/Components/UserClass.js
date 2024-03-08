@@ -13,7 +13,7 @@ class UserClass extends React.Component {
       },
     };
 
-    console.log("user constructor" + this.state.userInfo.login);
+    // console.log("user constructor" + this.state.userInfo.login);
   }
   async componentDidMount() {
     const data = await fetch("https://api.github.com/users/MDADIL063");
@@ -22,14 +22,14 @@ class UserClass extends React.Component {
     this.setState({
       userInfo: json,
     });
-    console.log("user componentDidMount" + this.state.userInfo.login);
+    // console.log("user componentDidMount" + this.state.userInfo.login);
   }
   componentDidUpdate() {
-    console.log("user componentDidUpdate" + this.state.userInfo.login);
+    // console.log("user componentDidUpdate" + this.state.userInfo.login);
   }
 
   render() {
-    console.log("user render" + this.state.userInfo.login);
+    // console.log("user render" + this.state.userInfo.login);
     const { login, id, followers, url } = this.state.userInfo;
     return (
       <div className="about-card">
